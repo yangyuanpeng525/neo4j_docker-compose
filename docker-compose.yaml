@@ -1,0 +1,15 @@
+version: '3'
+services:
+  neo4j:
+    image: registry.cn-hangzhou.aliyuncs.com/yangyuanpeng/neo4j:3.5.3
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - /neo4j/data:/data
+      - /neo4j/logs:/logs
+      - /etc/localtime:/etc/localtime
+    ports:
+      - 7474:7474
+      - 7473:7473
+      - 7687:7687
+
